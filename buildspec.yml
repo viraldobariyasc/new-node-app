@@ -24,7 +24,7 @@ phases:
 
   post_build:
     commands:
-      - printf '{"ImageURI":"%s"}' $REPOSITORY_URI:$IMAGE_TAG > imageDetail.json
+      - printf '{"ImageURI":"%s"}' "$REPOSITORY_URI:$IMAGE_TAG" > imageDetail.json
 
 artifacts:
   files:
