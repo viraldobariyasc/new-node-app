@@ -1,10 +1,13 @@
 {
   "name": "ecs-demo",
   "version": "1.0.0",
+  "description": "Sample Node.js app for GitHub Actions CI",
   "dependencies": {
     "express": "^5.0.0"
   },
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "build": "node -c app.js",
+    "test": "node --test"
   }
 }

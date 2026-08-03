@@ -6,6 +6,10 @@ app.get("/", (req, res) => {
     res.send("Hello from ECS Fargate");
 });
 
-app.listen(3000, () => {
-    console.log("Server started");
-});
+if (require.main === module) {
+    app.listen(3000, () => {
+        console.log("Server started");
+    });
+}
+
+module.exports = app;
